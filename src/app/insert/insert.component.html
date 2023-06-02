@@ -3,15 +3,18 @@
   <form [formGroup]="user" (submit)="addUser()">
     <article>
       <h2>FORMULARI DE NOU USUARI</h2>
-      <label>primer nom </label><input id="nom" class="form-control" type="text" placeholder="entrar el nom..." formControlName="nom" [(ngModel)]="usuari.nom" [ngClass]="{'invalid': user.controls['nom'].invalid}">
-      <div *ngIf="user.controls['nom'].invalid">El nom és obligatori i almenys 4 caracters</div><br/><br/>
-      <label>segon nom </label><input id="cognom" class="form-control" type="text" placeholder="entrar el cognom..." formControlName="cognom" [(ngModel)]="usuari.cognom" [ngClass]="{'invalid': user.controls['cognom'].invalid}"><div *ngIf="user.controls['cognom'].invalid">El cognom és obligatori i almenys 4 caracters</div><br/><br/>
-      <label>coreu electronic</label><input id="email" class="form-control" type="text" placeholder="entrar el correu..." formControlName="email" [(ngModel)]="usuari.email" [ngClass]="{'invalid': user.controls['email'].invalid}"><div *ngIf="user.controls['email'].invalid">El email és obligatori i el seu format correcte</div><br/><br/>
+      <label>primer nom</label><input id="nom" class="form-control" placeholder="entrar el nom..." formControlName="nom" [ngClass]="{'invalid': user.controls['nom'].invalid}"/><div *ngIf="user.controls['nom'].invalid">El nom és obligatori i almenys 4 caracters</div><br/><br/>
+      <label>segon nom </label><input id="cognom" class="form-control" placeholder="entrar el cognom..." formControlName="cognom" [ngClass]="{'invalid': user.controls['cognom'].invalid}"/><div *ngIf="user.controls['cognom'].invalid">El cognom és obligatori i almenys 4 caracters</div><br/><br/>
+      <label>coreu electronic</label><input id="email" class="form-control" placeholder="entrar el correu..." formControlName="email" [ngClass]="{'invalid': user.controls['email'].invalid}"/><div *ngIf="user.controls['email'].invalid">El email és obligatori i el seu format correcte</div><br/><br/>
     </article>
     <div class="botons">
       <button type="submit" [disabled]="!user.valid">AFEGIR USUARI</button>
       <button type="button" routerLink="/home">TORNAR ENRERA</button>
     </div>
   </form>
+</section>
+<section class="message">
+  <br/>
+  <app-message></app-message>
 </section>
 

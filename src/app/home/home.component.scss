@@ -5,16 +5,18 @@ article {
   margin: 1%;
   border-radius: 1rem;
   border:#8170be solid .25rem;
+  box-shadow: .2rem .2rem .6rem rgba(1,1,1,0.75);
 }
 .invalid{
-  border: #ff0000 solid 0.15rem;
+  border: #ff0000 solid 0.2rem;
 }
 #nom:hover, #cognom:hover, #email:hover {
   color:#ffffff;
   background-color: #9b9b9b;
 }
 button {
-  width: 7.25rem;
+  margin: .25%;
+  width: 7.275rem;
   font-size: 1.3rem;
   background: #9c9c8b;
   color: #252925;
@@ -42,21 +44,30 @@ input, label {
   padding : .5rem;
 }
 input[type="button"] {
-  width:5rem;
+  width:3.5rem;
+}
+.clear {
   background: #8b0c03;
   color: #cbd6ec
 }
-input[type="button"]:hover {
+.clear:hover {
+  border: #a7a69d solid .2rem;
   background: #a7a69d;
   color: #029444
+}
+.empty {
+  margin-top: 2rem;
+  color:#8b0c03;
+}
+h3{
+  text-align: center;
 }
 table {
   margin: auto;
   background: #cbffcb;
   text-align: center;
   border:#8170be solid .2rem;
-  width: 100%;
-  max-width: 500px;
+  width: 94%;
 }
 th {
   border:#8170be solid .2rem;
@@ -73,12 +84,13 @@ tr:not(:first-child):hover {
   background: #8e7bd1;
 }
 section {
+  display: block;
   margin: .1rem auto;
   width:100%;
   padding: .25%;
 }
 
-@media only screen and (min-width: 820px) {
+@media only screen and (min-width: 780px) {
   section{width:50%;}
 }
 @media only screen and (min-width: 1280px) {

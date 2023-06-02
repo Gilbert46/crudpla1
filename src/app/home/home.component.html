@@ -3,14 +3,14 @@
   <form [formGroup]="user" (submit)="updateUser()">
     <article [hidden]="!getBt()">
       <h2>USUARI A MODIFICAR</h2>
-      <label>primer nom </label><input id="nom" class="form-control" type="text" placeholder="entrar el nom..." formControlName="nom" [(ngModel)]="usuari.nom" [ngClass]="{'invalid': user.controls['nom'].invalid}">
-      <div *ngIf="user.controls['nom'].invalid">El nom és obligatori i almenys 4 caracters</div><br/><br/>
-      <label>segon nom </label><input id="cognom" class="form-control" type="text" placeholder="entrar el cognom..." formControlName="cognom" [(ngModel)]="usuari.cognom" [ngClass]="{'invalid': user.controls['cognom'].invalid}" ><div *ngIf="user.controls['cognom'].invalid">El cognom és obligatori i almenys 4 caracters</div><br/><br/>
-      <label>coreu electronic</label><input id="email" class="form-control" type="text" placeholder="entrar el correu..." formControlName="email" [(ngModel)]="usuari.email" [ngClass]="{'invalid': user.controls['email'].invalid}"><div *ngIf="user.controls['email'].invalid">El email és obligatori i el seu format correcte</div><br/><br/><br/>
+      <label>primer nom </label><input id="nom" class="form-control" placeholder="entrar el nom..." formControlName="nom" [ngClass]="{'invalid': user.controls['nom'].invalid}"/><div *ngIf="user.controls['nom'].invalid">El nom és obligatori i almenys 4 caracters</div><br/><br/>
+      <label>segon nom </label><input id="cognom" class="form-control" placeholder="entrar el cognom..." formControlName="cognom" [ngClass]="{'invalid': user.controls['cognom'].invalid}"/><div *ngIf="user.controls['cognom'].invalid">El cognom és obligatori i almenys 4 caracters</div><br/><br/>
+      <label>coreu electronic</label><input id="email" class="form-control" type="text" placeholder="entrar el correu..." formControlName="email" [ngClass]="{'invalid': user.controls['email'].invalid}"/><div *ngIf="user.controls['email'].invalid">El email és obligatori i el seu format correcte</div><br/><br/><br/>
     </article>
     <div class="botons">
       <button  type="submit" [disabled]="!user.valid || !getBt()">MODIFICA USUARI</button>
-      <button type="button" routerLink="/insert">INSERTAR USUARI</button>
+      <button type="button" routerLink="/insert">INSERTA USUARI</button>
+      <button type="button" class="clear" (click)="delAllUser()">ELIMINA TOTS</button>
     </div>
   </form>
   <br/><br/><br/>
@@ -19,7 +19,14 @@
   <table class="table table-striped">
     <tr class='table-dark'><th scope="col">N.</th><th scope="col">Nom</th><th scope="col">Cognom</th><th scope="col">Correu electrónic</th><th>Eliminar</th></tr>
     <tr *ngFor="let user of users; let i = index; let even = even" [ngClass]="{'altern': !!even}">
-      <th (click)="enviaFormulary(i)">{{ i + 1 }}</th><th (click)="enviaFormulary(i)">{{ user.nom }}</th><th (click)="enviaFormulary(i)">{{ user.cognom }}</th><th (click)="enviaFormulary(i)">{{ user.email }}</th><th><input type="button" (click)="delUsuari(i)" value="DEL"></th>
+      <th (click)="enviaFormulary(i)">{{ i + 1 }}</th><th (click)="enviaFormulary(i)">{{ user.nom }}</th><th (click)="enviaFormulary(i)">{{ user.cognom }}</th><th (click)="enviaFormulary(i)">{{ user.email }}</th><th><input type="button" class="clear" (click)="delUsuari(i)" value='<--'></th>
     </tr>
   </table>
+</section>
+<section *ngIf="!users.length" class="empty">
+  <br/>
+  <h3>No tens registres en la bbdd localSotrage</h3>
+</section>
+<section>
+  <app-message></app-message>
 </section>

@@ -6,9 +6,10 @@ article {
   margin: 1%;
   border-radius: 1rem;
   border:#8170be solid .25rem;
+  box-shadow: .2rem .2rem .6rem rgba(1,1,1,0.75);
 }
 .invalid{
-  border: #ff0000 solid 0.15rem;
+  border: #ff0000 solid 0.2rem;
 }
 #nom:hover, #cognom:hover, #email:hover {
   color:#ffffff;
@@ -20,9 +21,9 @@ article {
   padding: 1rem;
   margin: 1rem 1rem 1rem 1rem;
 }
-
 button {
-  width: 7.25rem;
+  margin: .25%;
+  width: 7.275rem;
   font-size: 1.3rem;
   background: #9c9c8b;
   color: #252925;
@@ -43,14 +44,18 @@ input, label {
   font-size: 1.2rem;
   padding : .5rem;
 }
-
+.message {
+  margin-top: 4rem;
+  text-align: center;
+}
 section {
+  display: block;
   margin: .1rem auto;
   width:100%;
   padding: .25%;
 }
 
-@media only screen and (min-width: 920px) {
+@media only screen and (min-width: 780px) {
   section {width:50%;}
 }
 @media only screen and (min-width: 1380px) {
