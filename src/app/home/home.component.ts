@@ -23,7 +23,7 @@ export class HomeComponent implements OnInit{
   user: FormGroup = new FormGroup({
     nom: new FormControl('', [Validators.required, Validators.minLength(4)]),
     cognom: new FormControl('', [Validators.required, Validators.minLength(4)]),
-    email: new FormControl ('', [Validators.required, Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{3,3}$')])
+    email: new FormControl ('', [Validators.required, Validators.pattern('[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+.[A-Za-z]{3,3}$')])
   }) ;
 
   constructor( private route: ActivatedRoute, private userService: UserService, public messageService: MessageService) {}
@@ -53,6 +53,7 @@ export class HomeComponent implements OnInit{
       cognom : this.user.controls['cognom'].value,
       email : this.user.controls['email'].value
     }
+    user.email = user.email.toLocaleLowerCase();
     localStorage.setItem("crud", "update");
     this.userService.updateLocalStorge(user, this.idx);
     this.btUp = false;

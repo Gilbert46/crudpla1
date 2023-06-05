@@ -5,7 +5,7 @@ article {
   margin: 1%;
   border-radius: 1rem;
   border:#8170be solid .25rem;
-  box-shadow: .2rem .2rem .6rem rgba(1,1,1,0.75);
+  box-shadow: .5rem .5rem 1.5rem rgba(1,1,1,0.75);
 }
 .invalid{
   border: #ff0000 solid 0.2rem;
@@ -68,7 +68,8 @@ table {
   text-align: center;
   border:#8170be solid .2rem;
   width: 94%;
-  box-shadow: .2rem .2rem .6rem rgba(1,1,1,0.75);
+  border-radius: 1rem;
+  box-shadow: .5rem .5rem 1.5rem rgba(1,1,1,0.75);
 }
 th {
   border:#8170be solid .2rem;

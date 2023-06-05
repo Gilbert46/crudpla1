@@ -17,7 +17,7 @@ export class InsertComponent  implements OnInit {
   user: FormGroup = new FormGroup({
     nom: new FormControl('', [Validators.required, Validators.minLength(4)]),
     cognom: new FormControl('', [Validators.required, Validators.minLength(4)]),
-    email: new FormControl ('', [Validators.required, Validators.pattern('[a-z0-9._%+-]+@[a-z0-9]+.[a-z]{3,3}$')])
+    email: new FormControl ('', [Validators.required, Validators.pattern('[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+.[A-Za-z]{3,3}$')])
   }) ;
 
   constructor(private userService: UserService, private location: Location) {}
@@ -33,6 +33,7 @@ export class InsertComponent  implements OnInit {
         cognom : this.user.controls['cognom'].value,
         email : this.user.controls['email'].value
       }
+      user.email = user.email.toLocaleLowerCase();
       this.userService.addLocalStorage(user);
       this.crud = 'disabled';
       this.location.back();
