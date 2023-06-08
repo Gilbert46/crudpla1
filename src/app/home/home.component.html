@@ -1,19 +1,6 @@
 <h1>{{ title }}</h1>
 <section>
-  <form [formGroup]="user" (submit)="updateUser()">
-    <article [hidden]="!getBt()">
-      <h2>USUARI A MODIFICAR</h2>
-      <label>primer nom </label><input id="nom" class="form-control" placeholder="entrar el nom..." formControlName="nom" [ngClass]="{'invalid': user.controls['nom'].invalid}"/><div *ngIf="user.controls['nom'].invalid">El nom és obligatori i almenys 4 caracters</div><br/><br/>
-      <label>segon nom </label><input id="cognom" class="form-control" placeholder="entrar el cognom..." formControlName="cognom" [ngClass]="{'invalid': user.controls['cognom'].invalid}"/><div *ngIf="user.controls['cognom'].invalid">El cognom és obligatori i almenys 4 caracters</div><br/><br/>
-      <label>coreu electronic</label><input id="email" class="form-control" type="text" placeholder="entrar el correu..." formControlName="email" [ngClass]="{'invalid': user.controls['email'].invalid}"/><div *ngIf="user.controls['email'].invalid">El email és obligatori i el seu format correcte</div><br/><br/><br/>
-    </article>
-    <div class="botons">
-      <button  type="submit" [disabled]="!user.valid || !getBt()">MODIFICA USUARI</button>
-      <button type="button" routerLink="/insert">INSERTA USUARI</button>
-      <button type="button" class="clear" (click)="delAllUser()">ELIMINA TOTS</button>
-    </div>
-  </form>
-  <br/><br/><br/>
+  <app-modal></app-modal>
 </section>
 <section *ngIf="users.length">
   <table class="table table-striped">

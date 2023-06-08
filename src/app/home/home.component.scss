@@ -1,56 +1,13 @@
-article {
-  background: #8e7bd1;
-  color: #fcfcfc;
-  padding: .5%;
-  margin: 1%;
-  border-radius: 1rem;
-  border:#8170be solid .25rem;
-  box-shadow: .5rem .5rem 1.5rem rgba(1,1,1,0.75);
-}
-.invalid{
-  border: #ff0000 solid 0.2rem;
-}
-#nom:hover, #cognom:hover, #email:hover {
-  color:#ffffff;
-  background-color: #9b9b9b;
-}
-button {
-  margin: .25%;
-  width: 7.275rem;
-  font-size: 1.3rem;
-  background: #9c9c8b;
-  color: #252925;
-  border: #cbd6ec solid .2rem;
-  border-radius: .3rem;
-}
-button:hover {
-  background: #787e78;
-  color: #13e713;
-  border: #787e78 solid .2rem;
-}
-button:disabled, button:disabled:hover {
-  background: #55554b;
-  color: #252925;
-  border: #cbd6ec solid .2rem;
-}
-.botons {
-  display: flex;
-  float: right;
-  padding: 1rem;
-  margin: 1rem 1rem 1rem 1rem;
-}
-input, label {
-  font-size: 1.2rem;
-  padding : .5rem;
-}
+
 input[type="button"] {
-  width:3.5rem;
-}
-.clear {
+  width:3rem;
+  font-size: 1.5rem;
+  padding : .05rem;
+  border-radius: .05rem;
   background: #8b0c03;
-  color: #cbd6ec
+  color: #cbd6ec;
 }
-.clear:hover {
+input[type="button"]:hover {
   border: #a7a69d solid .2rem;
   background: #a7a69d;
   color: #029444
@@ -59,9 +16,6 @@ input[type="button"] {
   margin-top: 2rem;
   color:#8b0c03;
 }
-h3{
-  text-align: center;
-}
 table {
   margin: auto;
   background: #cbffcb;
@@ -69,7 +23,7 @@ table {
   border:#8170be solid .2rem;
   width: 94%;
   border-radius: 1rem;
-  box-shadow: .5rem .5rem 1.5rem rgba(1,1,1,0.75);
+  box-shadow: .3rem .3rem .3rem rgba(1,1,1,0.75);
 }
 th {
   border:#8170be solid .2rem;

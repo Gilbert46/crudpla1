@@ -1,7 +1,7 @@
 <div *ngIf="messageService.misatges.length">
   <br/>
   <h3>Missatges</h3>
-  <div *ngFor = 'let misatge of messageService.misatges'>{{ misatge }}</div>
+  <div *ngFor = "let misatge of messageService.misatges">{{ misatge }}</div>
   <br/>
-  <button type='button' class='clear' (click)='messageService.clear()'>BORRA MSG</button>
+  <button type='button' class="clear" (click)="messageService.clear()">BORRA MSG</button>
 </div>

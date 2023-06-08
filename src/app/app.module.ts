@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { InsertComponent } from './insert/insert.component';
 import { MessageComponent } from './message/message.component';
+import { ModalComponent } from './home/modal/modal.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     InsertComponent,
-    MessageComponent
+    MessageComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,

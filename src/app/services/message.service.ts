@@ -5,14 +5,14 @@ import { Injectable } from '@angular/core';
 })
 export class MessageService {
 
-  misatges: string[] = [];
+  misatges: string[] = []
 
   add(misatge: string) {
-    this.misatges.push(misatge);
+    this.misatges.push(misatge)
   }
 
   clear() {
-    this.misatges = [];
+    this.misatges = []
   }
 
 }

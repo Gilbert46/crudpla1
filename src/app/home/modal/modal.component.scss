@@ -1,4 +1,7 @@
 
+h3{
+  text-align: center;
+}
 article {
   background: #8e7bd1;
   color: #fcfcfc;
@@ -8,20 +11,17 @@ article {
   border:#8170be solid .25rem;
   box-shadow: .3rem .3rem .3rem rgba(1,1,1,0.75);
 }
-.invalid{
-  border: #ff0000 solid 0.2rem;
+input, label {
+  font-size: 1.2rem;
+  padding : .5rem;
 }
 #nom:hover, #cognom:hover, #email:hover {
   color:#ffffff;
   background-color: #9b9b9b;
 }
-.botons {
-  display: flex;
-  float: right;
-  padding: 1rem;
-  margin: 1rem 1rem 1rem 1rem;
+.invalid{
+  border: #ff0000 solid 0.2rem;
 }
-
 button {
   margin: .25%;
   width: 7.275rem;
@@ -41,24 +41,18 @@ button:disabled, button:disabled:hover {
   color: #252925;
   border: #cbd6ec solid .2rem;
 }
-input, label {
-  font-size: 1.2rem;
-  padding : .5rem;
+.botons {
+  display: flex;
+  float: right;
+  padding: 1rem;
+  margin: 1rem 1rem 1rem 1rem;
 }
-.message {
-  margin-top: 4rem;
-  text-align: center;
+.clear {
+  background: #8b0c03;
+  color: #cbd6ec
 }
-section {
-  display: block;
-  margin: .1rem auto;
-  width:100%;
-  padding: .25%;
-}
-
-@media only screen and (min-width: 780px) {
-  section {width:50%;}
-}
-@media only screen and (min-width: 1380px) {
-  section {width:35%;}
+.clear:hover {
+  border: #a7a69d solid .2rem;
+  background: #a7a69d;
+  color: #029444
 }
