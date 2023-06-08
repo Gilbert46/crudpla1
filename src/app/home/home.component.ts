@@ -24,13 +24,17 @@ export class HomeComponent implements OnInit{
   }
 
   enviaFormulary(i : number): void {
-    this.idx = i
-    this.btUp = true
+    if (!this.btUp) {
+      this.idx = i
+      this.btUp = true
+    }
   }
 
   delUsuari(i: number): void {
-    localStorage.setItem("crud", "delete")
-    this.userService.delLocalStorage(i)
+    if (!this.btUp) {
+      localStorage.setItem("crud", "delete")
+      this.userService.delLocalStorage(i)
+    }
   }
-
 }
+

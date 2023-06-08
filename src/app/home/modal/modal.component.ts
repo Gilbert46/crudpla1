@@ -27,6 +27,7 @@ export class ModalComponent implements OnInit {
 
   ngOnInit(): void {
     this.users = this.userService.getLocalStorage()
+    this.setBt(false)
   }
 
   readUser(): void {
@@ -53,6 +54,7 @@ export class ModalComponent implements OnInit {
   delAllUser() {
     localStorage.setItem("crud", "delete all")
     this.userService.delAllLocalStorage()
+    this.setBt(false)
   }
 
   setBt(bt: boolean): void {
